@@ -1,0 +1,46 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Configuración del logotipo de Arch Linux
+[os]
+format = "[$symbol]($style) "
+style = "bold blue"
+disabled = false
+
+# Asignación del símbolo personalizado para Arch Linux
+[os.symbols]
+Arch = "󰣇 "
+
+# Configuración del nombre de usuario
+[username]
+style_user = 'blue bold'
+style_root = 'black bold'
+format = "[$user]($style) in "
+show_always = true
+# aliases = { "corpuser034g" = "matchai" }
+# detect_env_vars = ['!TMUX', 'SSH_CONNECTION']
+disabled = false
+
+# Configuración de la ruta completa
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'bold cyan'
+read_only_style = 'red'
+truncation_length = 10
+truncation_symbol = "…/"
+disabled = false
+
+# Configuración del estado de Git
+[git_branch]
+symbol = " "  # Icono de la rama Git
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[❯](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[❯](bold red)'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
